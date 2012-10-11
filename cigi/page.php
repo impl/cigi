@@ -70,7 +70,7 @@ function cigi_page_render($page) {
 
     if(isset($page[CIGI_PAGE_DECORATOR])) {
         if(!cigi_template_is($page[CIGI_PAGE_DECORATOR])) {
-            $page[CIGI_PAGE_DECORATOR] = page_template_get($page, $page[CIGI_PAGE_DECORATOR]);
+            $page[CIGI_PAGE_DECORATOR] = cigi_page_template_get($page, $page[CIGI_PAGE_DECORATOR]);
         }
 
         return cigi_template_compile($page[CIGI_PAGE_DECORATOR], array('template' => $template, 'page' => $page, 'inner' => $compiled));
